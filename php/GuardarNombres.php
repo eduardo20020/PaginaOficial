@@ -1,8 +1,8 @@
 <?php
-
-$json_data = file_get_contents('php://input');
-$data = json_decode($json_data, true);
-
-echo "la erpuesta de tu peticion es: ". $data;
-
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    echo "Parámetros POST:<br>";
+    foreach ($_POST as $key => $value) {
+        echo "$key: $value<br>";
+    }
+}
 ?>
