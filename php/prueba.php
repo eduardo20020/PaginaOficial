@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($data !== null) {
         // Accede a los datos del JSON
         $nombre = $data['nombre'] ?? '';
-        $contra = $data['contra'] ?? '';
+        $contra = $data['password'] ?? '';
 
         // Muestra los datos recibidos
         echo "Nombre recibido: " . $nombre . "<br>";
