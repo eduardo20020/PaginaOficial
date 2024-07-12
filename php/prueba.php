@@ -31,9 +31,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Aquí puedes realizar operaciones con la base de datos, por ejemplo:
             // Insertar datos en una tabla
-            $stmt = $conn->prepare("INSERT INTO usuarios (nombre, password) VALUES (:nombre, :password)");
+            $stmt = $conn->prepare("INSERT INTO usuario (nombre, contra) VALUES (:nombre, :contra)");
             $stmt->bindParam(':nombre', $nombre);
-            $stmt->bindParam(':password', $contra);
+            $stmt->bindParam(':contra', $contra);
             $stmt->execute();
 
             echo "Datos insertados correctamente en la base de datos.";
