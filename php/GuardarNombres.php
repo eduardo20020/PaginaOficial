@@ -1,6 +1,6 @@
 <?php
 // Verificar si la solicitud es un POST y si tiene datos
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SERVER['CONTENT_TYPE']) && $_SERVER['CONTENT_TYPE'] === 'application/json') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Recibir el cuerpo de la solicitud JSON
     $json_data = file_get_contents('php://input');
 
