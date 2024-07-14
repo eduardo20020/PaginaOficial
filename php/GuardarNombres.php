@@ -1,6 +1,5 @@
 <?php
 // Verificar si la solicitud es un POST y si tiene datos
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Recibir el cuerpo de la solicitud JSON
     $json_data = file_get_contents('php://input');
 
@@ -27,8 +26,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Responder con una confirmación o resultado
     echo "Solicitud procesada correctamente.";
 
-} else {
-    http_response_code(405); // Método no permitido
-    echo json_encode(array('error' => 'Método no permitido o formato incorrecto.'));
-}
 ?>
